@@ -123,3 +123,145 @@ main{
     display: inline;
     justify-content: space-around;
   }
+
+
+  /* Reviews Section */
+.reviews-section {
+    background-color: #f8f9fa; /* Matches the background of your overall webpage */
+    padding: 80px 20px; /* Top/bottom padding and horizontal padding */
+    text-align: center; /* Center the heading */
+    width: 100%; /* Take full width of parent */
+    box-sizing: border-box;
+}
+
+.reviews-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333; /* Dark gray for the heading */
+    margin-bottom: 60px; /* Space below the heading */
+}
+
+.reviews-grid {
+    display: grid; /* Use CSS Grid for the layout of the review cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    /* auto-fit: automatically fit as many 300px columns as possible */
+    /* minmax(300px, 1fr): each column is at least 300px, but will grow to share space equally */
+    gap: 30px; /* Space between the review cards */
+    max-width: 1200px; /* Max width for the grid of cards */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+.review-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    padding: 40px; /* Internal padding */
+    text-align: left; /* Align text within the card to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    border: 1px solid #e0e0e0; /* Very subtle border */
+}
+
+.review-card .stars {
+    color: #ffc107; /* Gold color for stars */
+    margin-bottom: 20px; /* Space below stars */
+    font-size: 1.2em; /* Adjust star size */
+}
+
+.review-card .stars .fas.fa-star {
+    margin-right: 2px; /* Small space between stars */
+}
+
+.review-card h3 {
+    font-size: 24px;
+    font-weight: 600; /* Slightly less bold than main headings */
+    color: #333333;
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.review-card p {
+    font-size: 16px;
+    color: #666666; /* Gray text for the review content */
+    margin-bottom: 30px; /* Space below review text */
+    flex-grow: 1; /* Allows the paragraph to push the reviewer info to the bottom */
+}
+
+.reviewer-info {
+    display: flex; /* Use flexbox for avatar and name/date */
+    align-items: center; /* Vertically center items */
+    gap: 15px; /* Space between avatar and text */
+    margin-top: auto; /* Pushes the reviewer-info to the bottom of the card */
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make avatar round */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #333333;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #999999; /* Lighter gray for date */
+}
+
+/* Responsive Adjustments */
+.media (max-width: 1024px) {
+    .reviews-section h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .review-card {
+        padding: 35px;
+    }
+}
+
+.media (max-width: 768px) {
+    .reviews-section {
+        padding: 60px 15px;
+    }
+
+    .reviews-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Stack reviews vertically on smaller screens */
+        gap: 20px;
+    }
+
+    .review-card {
+        padding: 30px;
+    }
+
+    .review-card h3 {
+        font-size: 20px;
+    }
+
+    .review-card p {
+        font-size: 15px;
+    }
+
+    .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.media (max-width: 480px) {
+    .reviews-section h2 {
+        font-size: 28px;
+    }
+}
