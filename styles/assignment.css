@@ -6,11 +6,27 @@
   font-style: normal;
   color: #4E47FF;
 }
+.inter-second{
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 80px;
+  font-style: normal;
+  color: #4E47FF;
+}
+.inter-third{
+  font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400px;
+  font-size: 20px;
+  font-style: normal;
+  color:#B7ABAB;
+}
 .raleway-first{
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 65px;
-  
+
 }
 .raleway-second {
   font-family: "Raleway", sans-serif;
@@ -35,9 +51,14 @@ raleway-fourth{
   font-optical-sizing: auto;
   font-weight: 400px;
   font-size: 24px;
-  color:#2E2D3D;
+  color:#B7ABAB;
   font-style: normal
 
+}
+.raleway-fifth{
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 38px;
 }
 .bg{
   background-image: url(/image/header-bg.png);
@@ -90,5 +111,15 @@ main{
 .img-radius{
   border-radius: 48px;
 }
-  
-  
+  .second-bg{
+    background-color:#E2E2EC;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1140px;
+    margin: 0px auto;
+
+  }
+  .joined users{
+    display: inline;
+    justify-content: space-around;
+  }
