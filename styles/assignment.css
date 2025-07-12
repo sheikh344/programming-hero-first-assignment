@@ -22,6 +22,13 @@
   font-style: normal;
   color:#B7ABAB;
 }
+.inter-fourth{
+    font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 900px;
+  font-size: 100px;
+
+}
 .raleway-first{
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -66,11 +73,10 @@ raleway-fourth{
   font-size: 97px;
 }
 .bg{
-  background-image: url(/image/header-bg.png);
-  background-size: cover;
-  padding-bottom: 5px;
-  border-image-width: 1440px;
-  padding: 0px;
+    background-image: url(/image/header-bg.png);
+    background-size: cover;
+    padding-bottom: 5px;
+    border-image-width: 1440px;
 }
 .bg1{
   background-color:#f5f8ff;
@@ -129,296 +135,350 @@ main{
     margin: 0px auto;
 
   }
-  .joined users{
+  .joined-users{
     display: flex;
     justify-content: space-around;
-    text-align: justify;
   }
 
-
-  /* Reviews Section */
 .reviews-section {
-    background-color: #f8f9fa; 
-    /* Matches the background of your overall webpage */
-    padding: 80px 20px;
-     /* Top/bottom padding and horizontal padding */
-    text-align: center; 
-    /* Center the heading */
+    text-align: center;
     width: 100%;
-     /* Take full width of parent */
-    box-sizing: border-box;
-}
-
-.reviews-section h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #333333; 
-    /* Dark gray for the heading */
-    margin-bottom: 60px; 
-    /* Space below the heading */
-}
-
-.reviews-grid {
-    display: grid;
-    /* Use CSS Grid for the layout of the review cards */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     /* Responsive columns */
-    /* auto-fit: automatically fit as many 300px columns as possible */
-    /* minmax(300px, 1fr): each column is at least 300px, but will grow to share space equally */
-    gap: 30px;
-     /* Space between the review cards */
     max-width: 1200px;
-     /* Max width for the grid of cards */
-    margin: 0 auto; 
-    /* Center the grid horizontally */
+}
+
+.section-title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between cards */
 }
 
 .review-card {
-    background-color: #ffffff;
-     /* White background for the card */
-    border-radius: 10px; 
-    /* Rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-     /* Subtle shadow */
-    padding: 40px;
-     /* Internal padding */
-    text-align: left; 
-    /* Align text within the card to the left */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
     display: flex;
-    flex-direction: column; 
-    /* Stack content vertically */
-    border: 1px solid #e0e0e0;
-     /* Very subtle border */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.review-card .stars {
-    color: #ffc107;
-     /* Gold color for stars */
-    margin-bottom: 20px; 
-    /* Space below stars */
-    font-size: 1.2em;
-     /* Adjust star size */
-}
-
-.review-card .stars .fas.fa-star {
-    margin-right: 2px;
-     /* Small space between stars */
-}
-
-.review-card h3 {
-    font-size: 24px;
-    font-weight: 600;
-     /* Slightly less bold than main headings */
-    color: #333333;
+.stars {
+    color: #f7d002; /* Gold color for stars */
     margin-bottom: 15px;
-     /* Space below heading */
+    font-size: 1.2em;
 }
 
-.review-card p {
-    font-size: 16px;
-    color: #666666; 
-    /* Gray text for the review content */
-    margin-bottom: 30px; 
-    /* Space below review text */
-    flex-grow: 1; 
-    /* Allows the paragraph to push the reviewer info to the bottom */
+.stars .fas.fa-star {
+    margin-right: 2px;
+}
+
+.review-title {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.review-text {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows text to take up available space */
 }
 
 .reviewer-info {
     display: flex;
-     /* Use flexbox for avatar and name/date */
-    align-items: center; 
-    /* Vertically center items */
-    gap: 15px;
-     /* Space between avatar and text */
-    margin-top: auto; 
-    /* Pushes the reviewer-info to the bottom of the card */
+    align-items: center;
+    margin-top: 20px;
 }
 
 .reviewer-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-     /* Make avatar round */
-    object-fit: cover; 
-    /* Ensure image covers the area */
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #eee; /* Light border around avatar */
 }
 
 .reviewer-name {
+    color: #333;
     font-weight: 600;
-    color: #333333;
+    margin: 0;
+    font-size: 1.1em;
 }
 
 .review-date {
-    font-size: 14px;
-    color: #999999; 
-    /* Lighter gray for date */
-}
-
-/* Responsive Adjustments */
-.media (max-width: 1024px) {
-    .reviews-section h2 {
-        font-size: 36px;
-        margin-bottom: 50px;
-    }
-
-    .reviews-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-    }
-
-    .review-card {
-        padding: 35px;
-    }
-}
-
-.media (max-width: 768px) {
-    .reviews-section {
-        padding: 60px 15px;
-    }
-
-    .reviews-section h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
-
-    .reviews-grid {
-        grid-template-columns: 1fr; /* Stack reviews vertically on smaller screens */
-        gap: 20px;
-    }
-
-    .review-card {
-        padding: 30px;
-    }
-
-    .review-card h3 {
-        font-size: 20px;
-    }
-
-    .review-card p {
-        font-size: 15px;
-    }
-
-    .reviewer-avatar {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-.media (max-width: 480px) {
-    .reviews-section h2 {
-        font-size: 28px;
-    }
-}
-.container {
-    display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
-    overflow: hidden;
-     /* Ensures rounded corners are visible */
-}
-
-.left-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background-color: #f5f8ff; 
-    /* Same as body background for subtle contrast */
-}
-
-.left-section h1 {
-    font-size: 3em;
-    color: #333;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.right-section {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    box-sizing: border-box;
-     /* Include padding and border in the element's total width and height */
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #bbb;
-}
-
-.form-group textarea {
-    resize: vertical; 
-    /* Allow vertical resizing */
-    min-height: 120px;
-}
-
-button {
-    background-color: #6a5acd; 
-    /* Purple color */
-    color: #fff;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #5b4da8; 
-    /* Darker purple on hover */
+    color: #777;
+    font-size: 0.9em;
+    margin: 0;
 }
 
 /* Responsive adjustments */
 media (max-width: 768px) {
-    .container {
+    .reviews-container {
         flex-direction: column;
-        margin: 20px;
+        align-items: center;
     }
 
-    .left-section {
-        padding: 30px;
+    .review-card {
+        max-width: 90%;
     }
 
-    .left-section h1 {
-        font-size: 2.5em;
-    }
-
-    .right-section {
-        padding: 30px;
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
     }
 }
 
 media (max-width: 480px) {
-    .left-section h1 {
-        font-size: 2em;
+    .review-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    background-color: #F0F2F8; /* Background color */
+    padding: 40px;
+    gap: 80px; /* Space between left and right sections */
+}
+
+.contact-left {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 3.8em; /* Large, bold title */
+    color: #2D3748; /* Dark gray color for the title */
+    font-weight: 800; /* Extra bold */
+    line-height: 1.1;
+    margin: 0;
+}
+
+.contact-right {
+    flex: 1;
+    background-color: #F0F2F8; /* Match background, as form is part of the larger section */
+    padding: 20px;
+    border-radius: 10px; /* Optional: if you want a subtle rounded corner for the form area */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1em; /* Standard label font size */
+    color: #4A5568; /* Slightly darker gray for labels */
+    margin-bottom: 8px;
+    font-weight: 600; /* Semi-bold label */
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px; /* Slightly more padding */
+    border: 1px solid #E2E8F0; /* Light border */
+    border-radius: 8px; /* Rounded corners for inputs */
+    font-size: 1em;
+    color: #2D3748; /* Text color inside inputs */
+    background-color: #FFFFFF; /* White background for inputs */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #A0AEC0; /* Lighter gray for placeholders */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #667EEA; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); /* Subtle blue glow on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px; /* Minimum height for textarea */
+}
+
+.submit-button {
+    background-color: #667EEA; /* Primary button color */
+    color: white;
+    padding: 15px 30px; /* More padding for a larger button */
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    font-size: 1.1em; /* Larger font size for button text */
+    font-weight: 600; /* Semi-bold button text */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    width: 100%; /* Make button full width */
+}
+
+.submit-button:hover {
+    background-color: #5A6AD3; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive adjustments */
+media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .contact-title {
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 20px; /* Space below title when stacked */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: none; /* Remove flex grow */
+        width: 100%;
+        max-width: 500px; /* Limit width of form on smaller screens */
+    }
+
+    .contact-form {
+        padding: 0; /* Remove extra padding if any */
+    }
+}
+
+media (max-width: 500px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-title {
+        font-size: 2.5em;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .submit-button {
+        font-size: 0.95em;
+        padding: 12px 15px;
+    }
+}
+
+.main-footer {
+    width: 100%;
+    background-color: #F8F9FA; /* Footer background */
+    padding: 80px 20px; /* Ample padding top/bottom */
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px; /* Constrain content width */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer-logo {
+    font-size: 3.5em; /* Large logo text */
+    font-weight: 800; /* Extra bold */
+    color: #4B6BFB; /* Bright blue color for the logo */
+    margin-bottom: 30px;
+    letter-spacing: -0.03em; /* Slightly tighter letter spacing for bold text */
+}
+
+.footer-description {
+    font-size: 1.1em; /* Readable text size */
+    color: #5E698D; /* Slightly muted text color */
+    line-height: 1.6;
+    margin-bottom: 40px; /* Space between description and nav links */
+    max-width: 600px; /* Limit width of description for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between nav items */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #5E698D; /* Color for nav links */
+    font-size: 1em;
+    font-weight: 600; /* Semi-bold links */
+    transition: color 0.2s ease;
+}
+
+.footer-nav li a:hover {
+    color: #4B6BFB; /* Blue color on hover for links */
+}
+
+/* Responsive adjustments */
+media (max-width: 768px) {
+    .main-footer {
+        padding: 60px 15px;
+    }
+
+    .footer-logo {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+    }
+
+    .footer-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+        padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    .footer-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 15px; /* Adjust gap for vertical stacking */
+    }
+}
+
+media (max-width: 480px) {
+    .main-footer {
+        padding: 40px 10px;
+    }
+
+    .footer-logo {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+
+    .footer-description {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+
+    .footer-nav li a {
+        font-size: 0.95em;
     }
 }
