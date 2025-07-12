@@ -60,6 +60,11 @@ raleway-fourth{
   font-weight: bold;
   font-size: 38px;
 }
+.raleway-sixth{
+   font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 97px;
+}
 .bg{
   background-image: url(/image/header-bg.png);
   background-size: cover;
@@ -73,11 +78,16 @@ raleway-fourth{
 .btn-primary{
   background-color: #4E47FF;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   color: #FFFFFF;
-  padding: 36px, 12px;
+ display: inline-block;
+  padding: 10px 20px;;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
   border-radius: 5px;
   border: none;
+  
 }
 
 nav{
@@ -120,84 +130,118 @@ main{
 
   }
   .joined users{
-    display: inline;
+    display: flex;
     justify-content: space-around;
+    text-align: justify;
   }
 
 
   /* Reviews Section */
 .reviews-section {
-    background-color: #f8f9fa; /* Matches the background of your overall webpage */
-    padding: 80px 20px; /* Top/bottom padding and horizontal padding */
-    text-align: center; /* Center the heading */
-    width: 100%; /* Take full width of parent */
+    background-color: #f8f9fa; 
+    /* Matches the background of your overall webpage */
+    padding: 80px 20px;
+     /* Top/bottom padding and horizontal padding */
+    text-align: center; 
+    /* Center the heading */
+    width: 100%;
+     /* Take full width of parent */
     box-sizing: border-box;
 }
 
 .reviews-section h2 {
     font-size: 40px;
     font-weight: 700;
-    color: #333333; /* Dark gray for the heading */
-    margin-bottom: 60px; /* Space below the heading */
+    color: #333333; 
+    /* Dark gray for the heading */
+    margin-bottom: 60px; 
+    /* Space below the heading */
 }
 
 .reviews-grid {
-    display: grid; /* Use CSS Grid for the layout of the review cards */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    display: grid;
+    /* Use CSS Grid for the layout of the review cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     /* Responsive columns */
     /* auto-fit: automatically fit as many 300px columns as possible */
     /* minmax(300px, 1fr): each column is at least 300px, but will grow to share space equally */
-    gap: 30px; /* Space between the review cards */
-    max-width: 1200px; /* Max width for the grid of cards */
-    margin: 0 auto; /* Center the grid horizontally */
+    gap: 30px;
+     /* Space between the review cards */
+    max-width: 1200px;
+     /* Max width for the grid of cards */
+    margin: 0 auto; 
+    /* Center the grid horizontally */
 }
 
 .review-card {
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    padding: 40px; /* Internal padding */
-    text-align: left; /* Align text within the card to the left */
+    background-color: #ffffff;
+     /* White background for the card */
+    border-radius: 10px; 
+    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+     /* Subtle shadow */
+    padding: 40px;
+     /* Internal padding */
+    text-align: left; 
+    /* Align text within the card to the left */
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    border: 1px solid #e0e0e0; /* Very subtle border */
+    flex-direction: column; 
+    /* Stack content vertically */
+    border: 1px solid #e0e0e0;
+     /* Very subtle border */
 }
 
 .review-card .stars {
-    color: #ffc107; /* Gold color for stars */
-    margin-bottom: 20px; /* Space below stars */
-    font-size: 1.2em; /* Adjust star size */
+    color: #ffc107;
+     /* Gold color for stars */
+    margin-bottom: 20px; 
+    /* Space below stars */
+    font-size: 1.2em;
+     /* Adjust star size */
 }
 
 .review-card .stars .fas.fa-star {
-    margin-right: 2px; /* Small space between stars */
+    margin-right: 2px;
+     /* Small space between stars */
 }
 
 .review-card h3 {
     font-size: 24px;
-    font-weight: 600; /* Slightly less bold than main headings */
+    font-weight: 600;
+     /* Slightly less bold than main headings */
     color: #333333;
-    margin-bottom: 15px; /* Space below heading */
+    margin-bottom: 15px;
+     /* Space below heading */
 }
 
 .review-card p {
     font-size: 16px;
-    color: #666666; /* Gray text for the review content */
-    margin-bottom: 30px; /* Space below review text */
-    flex-grow: 1; /* Allows the paragraph to push the reviewer info to the bottom */
+    color: #666666; 
+    /* Gray text for the review content */
+    margin-bottom: 30px; 
+    /* Space below review text */
+    flex-grow: 1; 
+    /* Allows the paragraph to push the reviewer info to the bottom */
 }
 
 .reviewer-info {
-    display: flex; /* Use flexbox for avatar and name/date */
-    align-items: center; /* Vertically center items */
-    gap: 15px; /* Space between avatar and text */
-    margin-top: auto; /* Pushes the reviewer-info to the bottom of the card */
+    display: flex;
+     /* Use flexbox for avatar and name/date */
+    align-items: center; 
+    /* Vertically center items */
+    gap: 15px;
+     /* Space between avatar and text */
+    margin-top: auto; 
+    /* Pushes the reviewer-info to the bottom of the card */
 }
 
 .reviewer-avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Make avatar round */
-    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 50%;
+     /* Make avatar round */
+    object-fit: cover; 
+    /* Ensure image covers the area */
 }
 
 .reviewer-name {
@@ -207,7 +251,8 @@ main{
 
 .review-date {
     font-size: 14px;
-    color: #999999; /* Lighter gray for date */
+    color: #999999; 
+    /* Lighter gray for date */
 }
 
 /* Responsive Adjustments */
@@ -263,5 +308,117 @@ main{
 .media (max-width: 480px) {
     .reviews-section h2 {
         font-size: 28px;
+    }
+}
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+     /* Ensures rounded corners are visible */
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f8ff; 
+    /* Same as body background for subtle contrast */
+}
+
+.left-section h1 {
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+     /* Include padding and border in the element's total width and height */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #bbb;
+}
+
+.form-group textarea {
+    resize: vertical; 
+    /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+button {
+    background-color: #6a5acd; 
+    /* Purple color */
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #5b4da8; 
+    /* Darker purple on hover */
+}
+
+/* Responsive adjustments */
+media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .left-section {
+        padding: 30px;
+    }
+
+    .left-section h1 {
+        font-size: 2.5em;
+    }
+
+    .right-section {
+        padding: 30px;
+    }
+}
+
+media (max-width: 480px) {
+    .left-section h1 {
+        font-size: 2em;
     }
 }
